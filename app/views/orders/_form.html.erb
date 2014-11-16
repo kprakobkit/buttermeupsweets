@@ -1,0 +1,16 @@
+<%= form_for @order do |f| %>
+  <%= f.label :customer_name %>
+  <%= f.text_field :customer_name %><br />
+  <%= f.label :customer_contact_info %>
+  <%= f.text_field :customer_contact_info %><br />
+    <p>Items</p>
+    <div class="items">
+      <%= render "select_items" %>
+    </div>
+    <button id="addItems" type="button">Add items</button><br />
+    <%= f.submit "Order" %>
+<% end %>
+
+<div style="display: none" class="addItemsForm">
+  <%= render "select_items" %>
+</div>
