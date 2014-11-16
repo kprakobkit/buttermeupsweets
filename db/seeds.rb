@@ -5,3 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+
+menu = [
+  {
+    name: "Pumpkin Pie",
+    price: 20.00
+  },
+  {
+    name: "Pumpkin Cheese Cake Tart",
+    price: 25.00
+  },
+  {
+    name: "Apple Pie",
+    price: 20.00
+  },
+  {
+    name: "Pumpkin Bread",
+    price: 18.00
+  }
+]
+
+menu.each do |item|
+  Item.create(name: item[:name], price: item[:price])
+end
