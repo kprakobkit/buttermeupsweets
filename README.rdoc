@@ -1,0 +1,33 @@
+== README
+
+Requirements:
+
+Order form:
+ - A user can create an order form
+  - A user can select items to order on the order form
+    - Pumpkin pie: $20 dollars
+    - Pumpkin Cheese Cake Tart: $25
+    - Apple pie: $20
+    - Pumpkin bread: $18
+ - The user doesn't need to sign in
+ - They can just submit the form with their contact information
+   - Phone/Email
+   - Name
+ - Submitted form will go to customer, and Natalie. Then Natalie will get in touch with them.
+
+Models:
+ - order
+  - customer_name
+  - customer_contact_info
+ - item_order
+  - order_id
+  - item_id
+  _ quantity
+ - item
+  - name
+  - price
+
+- Others
+ - Please give us a week in advance
+ - Deliver in Bay Area
+
