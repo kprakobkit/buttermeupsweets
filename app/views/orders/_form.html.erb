@@ -9,7 +9,5 @@
     </div>
     <button id="addItems" type="button">Add items</button><br />
     <%= f.submit "Order" %>
+    <%= link_to "Back", root_path %>
 <% end %>
-<div style="display: none" class="addItemsForm">
-  <%= render "select_items" %>
-</div>
