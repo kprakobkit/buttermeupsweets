@@ -10,4 +10,10 @@ class Order < ActiveRecord::Base
       self.item_orders.new(item_id: item_quantity[0], item_quantity: item_quantity[1])
     end
   end
+
+  def order_total
+    self.item_orders.reduce(0) do |init, item_order|
+      init + (Item.find(item_order.item_id).price * item_order.item_quantity)
+    end
+  end
 end
