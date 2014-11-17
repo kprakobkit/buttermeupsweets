@@ -10,12 +10,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @items = Item.all
-    items = params[:item_id]
-    quantities = params[:quantity]
-    items_quantities = items.zip(quantities)
-    items_quantities.each do |item_quantity|
-      @order.item_orders.new(item_id: item_quantity[0], item_quantity: item_quantity[1])
-    end
+    @order.create_item_and_quantity(params[:item_id], params[:quantity])
 
     if @order.save
       flash.now[:notice] = "Order submitted successfully"

@@ -1,2 +1,2 @@
 <%= select_tag 'item_id[]', options_for_select(@items.map{ |item| [item.name, item.id] })%>
-<%= number_field_tag 'quantity[]' %>
+<%= number_field_tag 'quantity[]', 1 %>
