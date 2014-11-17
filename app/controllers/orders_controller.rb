@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
+    @items = Item.all
     items = params[:item_id]
     quantities = params[:quantity]
     items_quantities = items.zip(quantities)
@@ -17,8 +18,10 @@ class OrdersController < ApplicationController
     end
 
     if @order.save
+      flash.now[:notice] = "Order submitted successfully"
       render :index
     else
+      flash.now[:error] = "Order was not submitted successfully"
       render :new
     end
   end
