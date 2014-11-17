@@ -18,8 +18,6 @@ class OrdersController < ApplicationController
 
       redirect_to action: 'index'
     else
-      flash.now[:error] = "Order was not submitted successfully"
-
       render :new
     end
   end

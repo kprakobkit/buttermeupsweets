@@ -1,3 +1,5 @@
+<div class="mih-1-1 debug">
+<div class="container debug">
 <h1>New Order Form</h1>
 <% if @order.errors.any? %>
   <div id="error_explanation">
@@ -11,5 +13,7 @@
   </div>
 <% end %>
 <%= render "form" %>
-
+<%= link_to "Back", root_path %>
+</div>
+</div>
 

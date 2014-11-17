@@ -1,7 +1,7 @@
 <%= form_for @order do |f| %>
-  <%= f.label :customer_name %>
+  <%= f.label :customer_name %><br />
   <%= f.text_field :customer_name %><br />
-  <%= f.label :customer_contact_info %>
+  <%= f.label :customer_contact_info %><br />
   <%= f.text_field :customer_contact_info %><br />
     <p>Items</p>
     <div class="items">
@@ -10,10 +10,6 @@
     <button id="addItems" type="button">Add items</button><br />
     <%= f.submit "Order" %>
 <% end %>
-
-<div>
-<p>total: </p>
-</div>
 <div style="display: none" class="addItemsForm">
   <%= render "select_items" %>
 </div>
