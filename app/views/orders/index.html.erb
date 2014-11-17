@@ -1,7 +1,25 @@
 <div class="mih-1-1 logo">
 </div>
-<div class="mih-1-1 po-a">
-  <div class="container ta-c order-now">
-    <h1><%= link_to "Order", new_order_path %></h1>
+<div class="mih-1-1">
+  <div class="container">
+    <div class="row gutters products">
+      <div class="product col span_6">
+        <%= image_tag "applepie.jpg" %>
+      </div>
+      <div class="product col span_6">
+        <%= image_tag "pumpkinpie.jpg" %>
+      </div>
+    </div>
+    <div class="row gutters products">
+      <div class="product col span_6">
+        <%= image_tag "pumpkinbread.jpeg" %>
+      </div>
+      <div class="product col span_6">
+        <%= image_tag "pumpkincheesecake.jpg" %>
+      </div>
+    </div>
+  </div>
+  <div class="container ta-c order-form">
+    <h1><%= link_to "Taking orders for Thanksgiving now", new_order_path %></h1>
   </div>
 </div>
