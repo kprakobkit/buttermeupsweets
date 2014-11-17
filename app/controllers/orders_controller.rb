@@ -13,8 +13,9 @@ class OrdersController < ApplicationController
     @order.create_item_and_quantity(params[:item_id], params[:quantity])
 
     if @order.save
-      flash.now[:notice] = "Order submitted successfully"
-      render :index
+      flash[:notice] = "Order submitted successfully"
+      OrderMailer.order_confirmation_email(@order).deliver
+      redirect_to action: 'index'
     else
       flash.now[:error] = "Order was not submitted successfully"
       render :new
