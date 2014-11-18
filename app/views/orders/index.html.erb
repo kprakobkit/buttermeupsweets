@@ -1,26 +1,39 @@
 <div class="mih-1-1 logo">
+  <div class="button-down">
+    <p class="ta-c">scroll down</p>
+  </div>
 </div>
 <div class="mih-1-1">
   <div class="container">
     <div class="row gutters products">
       <div class="product col span_6">
         <%= image_tag "applepie.jpg" %>
+        <p class="ta-c">Apple Pie | $20.00</p>
       </div>
       <div class="product col span_6">
         <%= image_tag "pumpkinpie.jpg" %>
+        <p class="ta-c">Pumpkin Pie | $20.00</p>
       </div>
     </div>
     <div class="row gutters products">
       <div class="product col span_6">
         <%= image_tag "pumpkinbread.jpeg" %>
+        <p class="ta-c">Pumpkin Bread | $18.00</p>
       </div>
       <div class="product col span_6">
         <%= image_tag "pumpkincheesecake.jpg" %>
+        <p class="ta-c">Pumpkin Cheese Cake Tart | $25.00</p>
       </div>
+    <div class="button-down2">
+      <p class="ta-c">Order now</p>
+    </div>
     </div>
   </div>
-  <div class="container ta-c order-form">
-    <br />
-    <p class="fz-xl"><%= link_to "Taking orders for Thanksgiving now", new_order_path %></p>
+</div>
+<div class="mih-1-1">
+  <div class="container ta-c order-form-container">
+    <div class="order-form">
+      <p class="ta-c fz-xl"><%= link_to "Taking orders for Thanksgiving now", new_order_path %></p>
+    </div>
   </div>
 </div>

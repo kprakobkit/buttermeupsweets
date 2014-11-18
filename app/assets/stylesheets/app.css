@@ -16,13 +16,14 @@ a {
 
 .products {
   padding-top: 4%;
+  position: relative;
 }
 
 .product {
+  position: relative;
   display: block;
   margin: 0 auto;
   width: 100%;
-  position: relative;
 }
 
 .products img {
@@ -32,4 +33,19 @@ a {
   max-width: 100%;
 }
 
+.order-form-container {
+  position: relative;
+  height: 800px;
+}
 
+.order-form {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.button-down, .button-down2 {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+}
