@@ -10,12 +10,12 @@ a {
 }
 
 .logo {
-  background-image: url('buttermeup-logo.png');
+  background: url('buttermeup-logo.png') fixed;
   background-size: contain;
 }
 
 .products {
-  padding-top: 4%;
+  padding-top: 2%;
   position: relative;
 }
 
@@ -40,7 +40,7 @@ a {
 
 .order-form {
   position: absolute;
-  top: 50%;
+  top: 40%;
   width: 100%;
 }
 
@@ -48,4 +48,10 @@ a {
   position: absolute;
   top: 90%;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .button-down, .button-down2 {
+    display: none;
+}
 }

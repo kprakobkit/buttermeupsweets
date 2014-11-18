@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('#addItems').click(function() {
     $('.addItemsForm:last').clone().show().appendTo('.items');
   });
-  
+
   var windowHeight = $(window).height();
 
   $('.button-down').click(function(){
