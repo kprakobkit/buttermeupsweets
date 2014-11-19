@@ -1,13 +1,15 @@
 <%= form_for @order do |f| %>
   <%= f.label :customer_name %><br />
-  <%= f.text_field :customer_name %><br />
+  <%= f.text_field :customer_name, placeholder: "Full Name" %><br />
   <%= f.label :customer_contact_info %><br />
-  <%= f.text_field :customer_contact_info %><br />
+  <%= f.text_field :customer_contact_info, placeholder: "Email" %><br />
     <p>Items</p>
     <div class="items">
       <%= render "select_items" %>
     </div>
+    <br />
     <button id="addItems" type="button">Add items</button><br />
+    <br />
     <%= f.submit "Order" %>
     <%= link_to "Back", root_path %>
 <% end %>

@@ -1,5 +1,16 @@
-Thank you for ordering from Butter Me Up Sweets, <%= @customer_name %>
-=====
-Your order of <%= @items %>
+Hi, <%= @customer_name %>
+
+Thank you for ordering from Butter Me Up Sweets. Your order summary is below:
+
+Your order summary:
+
+<% @items.each do |item| %>
+  - <%= Item.find(item.id).name %>: <%= item.quantity %>
+<% end %>
+
 Total: <%= @total %>
-Thank you.
+
+I will be emailing you shortly to confirm your order. If you have any questions or would like to make a change to your order, please email me at natalie@buttermeupsweets.com Thank you very much.
+
+Best,
+Natalie

@@ -1,19 +1,19 @@
-<div class="mih-1-1 debug">
-<div class="container debug">
-<h1>New Order Form</h1>
-<% if @order.errors.any? %>
-  <div id="error_explanation">
-    <p><%= pluralize(@order.errors.count, "error") %> prohibited
+<div class="mih-1-1">
+  <div class="container">
+    <h1>Order Form</h1>
+    <% if @order.errors.any? %>
+      <div id="error_explanation">
+      <p><%= pluralize(@order.errors.count, "error") %> prohibited
       this order from being saved:</p>
-    <ul>
-    <% @order.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-    <% end %>
-    </ul>
+      <ul>
+        <% @order.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <%= render "form" %>
   </div>
-<% end %>
-<%= render "form" %>
-</div>
 </div>
 <div style="display: none" class="addItemsForm">
   <%= render "select_items" %>

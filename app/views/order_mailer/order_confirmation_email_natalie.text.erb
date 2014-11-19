@@ -1,0 +1,8 @@
+Customer Order: <%= @customer_name %>
+
+<% @items.each do |item| %>
+  - <%= Item.find(item.id).name %>: <%= item.quantity %>
+<% end %>
+
+Total: <%= @total %>
+

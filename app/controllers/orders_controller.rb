@@ -15,6 +15,7 @@ class OrdersController < ApplicationController
     if @order.save
       flash[:notice] = "Order submitted successfully"
       OrderMailer.order_confirmation_email(@order).deliver
+      OrderMailer.order_confirmation_email_natalie(@order).deliver
 
       redirect_to action: 'index'
     else
