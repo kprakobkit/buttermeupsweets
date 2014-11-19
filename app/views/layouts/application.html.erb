@@ -8,9 +8,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div>
 <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: "#{name} container" %>
+  <%= content_tag :p, msg, class: "#{name} ta-c" %>
 <% end -%>
+</div>
 <%= yield %>
 </body>
 </html>

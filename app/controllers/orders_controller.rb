@@ -13,7 +13,7 @@ class OrdersController < ApplicationController
     @order.create_item_and_quantity(params[:item_id], params[:quantity])
 
     if @order.save
-      flash[:notice] = "Order submitted successfully"
+      flash[:notice] = "Your order was successfully submitted! A confirmation email was sent to the email you provided. Also, Natalie will email you shortly. Thank you."
       OrderMailer.order_confirmation_email(@order).deliver
 
       redirect_to action: 'index'
