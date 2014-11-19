@@ -1,7 +1,7 @@
 Customer Order: <%= @customer_name %>
 
 <% @items.each do |item| %>
-  - <%= Item.find(item.id).name %>: <%= item.quantity %>
+  - <%= Item.find(item.item_id).name %>: <%= item.item_quantity %>
 <% end %>
 
 Total: <%= @total %>

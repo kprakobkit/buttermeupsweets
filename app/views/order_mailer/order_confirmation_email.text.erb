@@ -5,7 +5,7 @@ Thank you for ordering from Butter Me Up Sweets. Your order summary is below:
 Your order summary:
 
 <% @items.each do |item| %>
-  - <%= Item.find(item.id).name %>: <%= item.quantity %>
+  - <%= Item.find(item.item_id).name %>: <%= item.item_quantity %>
 <% end %>
 
 Total: <%= @total %>
