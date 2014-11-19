@@ -1,4 +1,4 @@
-Hi, <%= @customer_name %>
+Hi <%= @customer_name %>,
 
 Thank you for ordering from Butter Me Up Sweets. Your order summary is below:
 
@@ -8,9 +8,9 @@ Your order summary:
   - <%= Item.find(item.item_id).name %>: <%= item.item_quantity %>
 <% end %>
 
-Total: <%= @total %>
+Total: <%= @total %>0
 
-I will be emailing you shortly to confirm your order. If you have any questions or would like to make a change to your order, please email me at natalie@buttermeupsweets.com Thank you very much.
+I will email you shortly to confirm the order. If you have any questions or would like to make a change to the order, please email me any time at natalie@buttermeupsweets.com. Thank you very much.
 
 Best,
 Natalie
