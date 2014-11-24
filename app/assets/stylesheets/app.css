@@ -26,15 +26,30 @@ a {
 .product {
   position: relative;
   display: block;
-  margin: 0 auto;
   width: 100%;
 }
 
 .products img {
+  position: relative;
   display: block;
   margin: 5px auto;
   max-height: 100%;
   max-width: 100%;
+}
+
+.prod-desc {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+  margin-bottom: 40px;
+}
+
+.prod-desc span {
+  display: inline-block;
+  width: 300px;
+  border: solid red 1px;
 }
 
 .order-form-container {
@@ -48,8 +63,3 @@ a {
   width: 100%;
 }
 
-.button-down, .button-down2 {
-  position: absolute;
-  top: 90%;
-  width: 100%;
-}
