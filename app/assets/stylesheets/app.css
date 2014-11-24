@@ -6,7 +6,7 @@ html, body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .logo {
@@ -65,3 +65,18 @@ a {
   width: 100%;
 }
 
+.taking-orders {
+  display: inline-block;
+  padding: 20px;
+  background-color: rgb(237, 106, 29);
+  transition: background-color 0.4s ease;
+  color: white;
+}
+
+.taking-orders:hover {
+  display: inline-block;
+  background-color: white;
+  color: rgb(237, 106, 29);
+  border: solid 1px red;
+  padding: 20px;
+}
