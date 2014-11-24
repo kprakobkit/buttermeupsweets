@@ -3,5 +3,5 @@ $(document).ready(function() {
     $('.addItemsForm:last').clone().show().appendTo('.items');
   });
 
-  $('.prod-desc').wrapInner("<span>");
+  $('.prod-desc, .taking-orders').wrapInner("<span>");
 });
