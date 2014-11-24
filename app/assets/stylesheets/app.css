@@ -53,9 +53,3 @@ a {
   top: 90%;
   width: 100%;
 }
-
-@media (max-width: 768px) {
-  .button-down, .button-down2 {
-    display: none;
-}
-}
