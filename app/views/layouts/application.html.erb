@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Buttermeupsweets</title>
-  <%= stylesheet_link_tag "application", "https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext", media: "all"  %>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
+<title>Buttermeupsweets</title>
+<%= stylesheet_link_tag "application", "https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext", media: "all"  %>
+<%= stylesheet_link_tag    'application', media: 'all' %>
+<%= javascript_include_tag 'application' %>
+<%= csrf_meta_tags %>
 </head>
 <body>
 <div>
-<% flash.each do |name, msg| %>
-  <%= content_tag :p, msg, class: "#{name} ta-c" %>
+  <% flash.each do |name, msg| %>
+    <%= content_tag :p, msg, class: "#{name} ta-c" %>
 <% end -%>
 </div>
 <%= yield %>
+<footer>
+  <div class="container">
+    <div class="row gutters">
+      <div class="contact-info col span_6">
+        <h2 class="orange"><div class="reverse-text">B</div>utter<span class="blue">me</span>uP</h2>
+        <p class="orange">by <span class="blue">Kim </span> & <span class="blue">Nat</span></p>
+        <p class="orange">408.391.8005</p>
+        <p class="orange">contact@buttermeupsweets.com</p>
+      </div>
+      <div class="col span_6">
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

@@ -9,6 +9,13 @@ a {
   color: inherit;
 }
 
+footer {
+  width: 100%;
+  height: 40%;
+  border-top: 1px solid #e8e8e8;
+  background-color: #f3f6f8;
+}
+
 .logo {
   background: url('https://i.imgur.com/rDI8v33.png') fixed;
   background-size: contain;
@@ -56,7 +63,7 @@ a {
 
 .order-form-container {
   position: relative;
-  height: 800px;
+  height: 400px;
 }
 
 .order-form {
@@ -68,7 +75,7 @@ a {
 .taking-orders span{
   display: inline-block;
   padding: 20px;
-  background-color: rgb(237, 106, 29);
+  background-color: #ed6a1d;
   transition: background-color 0.4s ease;
   color: white;
 }
@@ -76,7 +83,30 @@ a {
 .taking-orders span:hover {
   display: inline-block;
   background-color: white;
-  color: rgb(237, 106, 29);
-  border: solid 1px rgb(237, 106, 29);
+  color: #ed6a1d;
+  border: solid 1px #ed6a1d;
   padding: 20px;
+}
+
+.contact-info {
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+.orange {
+  color: #ed6a1d;
+}
+
+.blue {
+  color: #71cee2;
+}
+
+.reverse-text{
+  display: inline-block;
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  unicode-bidi:bidi-override;
+  direction:rtl;
 }
