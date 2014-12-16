@@ -16,5 +16,5 @@ file_path = './db/menu.csv'
 
 CSV.foreach(file_path, :headers => true) do |row|
   item = row.to_hash
-  Item.new(name: item["name"], price: item["price"])
+  Item.create(name: item["name"], price: item["price"])
 end
