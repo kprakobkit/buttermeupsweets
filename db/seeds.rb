@@ -7,25 +7,14 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 
-menu = [
-  {
-    name: "Pumpkin Pie",
-    price: 20.00
-  },
-  {
-    name: "Pumpkin Cheese Cake Tart",
-    price: 25.00
-  },
-  {
-    name: "Apple Pie",
-    price: 20.00
-  },
-  {
-    name: "Pumpkin Bread",
-    price: 18.00
-  }
-]
+# menu = [ { name: "Pumpkin Pie", price: 20.00 }, { name: "Pumpkin Cheese Cake Tart", price: 25.00 }, { name: "Apple Pie", price: 20.00 }, { name: "Pumpkin Bread", price: 18.00 } ]
 
-menu.each do |item|
-  Item.create(name: item[:name], price: item[:price])
+# christmast_menu.each do |item|
+#   Item.create(name: item[:name], price: item[:price])
+# end
+file_path = './db/menu.csv'
+
+CSV.foreach(file_path, :headers => true) do |row|
+  item = row.to_hash
+  Item.new(name: item["name"], price: item["price"])
 end
