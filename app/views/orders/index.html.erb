@@ -6,7 +6,7 @@
       <div class="row gutters">
         <% items.each do |item| %>
           <div class="product col span_6">
-            <%= image_tag "applepie.jpg" %>
+            <%= image_tag "#{item.name.downcase.delete(' ')}.jpg" %>
             <p class="ta-c prod-desc"><%= item.name %> | $ <%= number_with_precision(item.price, {precision: 2})%></p>
           </div>
         <% end %>
